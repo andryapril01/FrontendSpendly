@@ -1,0 +1,108 @@
+.add-income-page {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+}
+
+.add-income-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(34,197,94,0.08), 0 1.5px 6px rgba(0,0,0,0.04);
+  padding: 36px 32px 28px 32px;
+  max-width: 420px;
+  width: 100%;
+  margin: 32px 0;
+}
+
+.add-income-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: #22c55e;
+  gap: 10px;
+}
+.income-icon {
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.add-income-form .form-group {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+.add-income-form label {
+  font-weight: 600;
+  margin-bottom: 7px;
+  color: #222;
+}
+.add-income-form input,
+.add-income-form textarea {
+  padding: 12px 14px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 7px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+.add-income-form input:focus,
+.add-income-form textarea:focus {
+  border-color: #22c55e;
+  outline: none;
+}
+.add-income-form textarea {
+  resize: vertical;
+  min-height: 38px;
+  max-height: 120px;
+}
+
+.btn-income {
+  width: 100%;
+  background: #22c55e;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 13px 0;
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-income:hover {
+  background: #16a34a;
+}
+
+.form-success {
+  color: #22c55e;
+  background: #e7fbe9;
+  border-radius: 6px;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+.form-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 6px;
+  padding: 8px 0;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .add-income-card {
+    padding: 18px 8px 18px 8px;
+    max-width: 98vw;
+  }
+  .add-income-title {
+    font-size: 1.1rem;
+  }
+} 

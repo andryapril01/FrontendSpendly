@@ -1,0 +1,255 @@
+.budget-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px 32px 16px;
+}
+.budget-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.btn-add-budget {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 10px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.budget-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.budget-item {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(99,102,241,0.06);
+  padding: 22px 24px 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.budget-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.budget-category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1.08rem;
+}
+.category-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.1rem;
+}
+.budget-amount {
+  text-align: right;
+}
+.budget-amount .spent {
+  font-weight: 700;
+  color: #222;
+}
+.budget-amount .total {
+  color: #888;
+  font-size: 0.97rem;
+}
+.budget-progress {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.progress-bar {
+  flex: 1;
+  height: 12px;
+  background: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.progress {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s;
+}
+.progress.normal {
+  background: #22c55e;
+}
+.progress.caution {
+  background: #facc15;
+}
+.progress.warning {
+  background: #f59e42;
+}
+.progress.over {
+  background: #ef4444;
+}
+.progress-text {
+  font-size: 0.97rem;
+  font-weight: 600;
+}
+.progress-text.normal {
+  color: #22c55e;
+}
+.progress-text.caution {
+  color: #facc15;
+}
+.progress-text.warning {
+  color: #f59e42;
+}
+.progress-text.over {
+  color: #ef4444;
+}
+.budget-status-label {
+  font-size: 1.01rem;
+  font-weight: 600;
+  margin-top: 2px;
+}
+.budget-error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 6px;
+  padding: 10px 16px;
+  margin: 18px 0;
+}
+@media (max-width: 700px) {
+  .budget-page {
+    padding: 10px 2px;
+  }
+  .budget-item {
+    padding: 12px 6px 12px 10px;
+  }
+  .budget-header h2 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Modal overlay */
+.budget-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.15);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.budget-modal-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(60,60,120,0.12);
+  padding: 2rem 2.5rem;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 400px;
+  position: relative;
+  animation: fadeIn .2s;
+}
+
+.budget-modal-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.budget-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.budget-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.budget-form-group label {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.1rem;
+}
+
+.budget-form-group input,
+.budget-form-group select {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: #f9fafb;
+  transition: border 0.2s;
+}
+
+.budget-form-group input:focus,
+.budget-form-group select:focus {
+  border: 1.5px solid #6366f1;
+  outline: none;
+}
+
+.budget-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  margin-top: 0.5rem;
+}
+
+.btn-cancel {
+  background: #f3f4f6;
+  color: #374151;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-cancel:hover {
+  background: #e5e7eb;
+}
+
+.btn-save {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 0.5rem 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-save:hover {
+  background: #4f46e5;
+}
+
+.budget-form-error {
+  color: #ef4444;
+  font-size: 0.98rem;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .budget-modal-card {
+    padding: 1.2rem 0.7rem;
+    min-width: 0;
+    width: 98vw;
+  }
+  .budget-modal-title {
+    font-size: 1.1rem;
+  }
+} 

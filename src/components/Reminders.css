@@ -1,0 +1,83 @@
+.reminders-page {
+  max-width: 700px;
+  margin: 32px auto;
+  background: var(--card-color);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  padding: 32px 24px;
+}
+.reminders-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.add-reminder-btn {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+.reminders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.reminder-item {
+  display: flex;
+  align-items: center;
+  background: #f3f4f6;
+  border-radius: 10px;
+  padding: 16px 18px;
+  gap: 18px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+}
+.reminder-icon {
+  font-size: 2rem;
+  width: 48px;
+  text-align: center;
+}
+.reminder-info {
+  flex: 1;
+}
+.reminder-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+.reminder-date {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+.reminder-status {
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #e0e7ff;
+  color: #6366f1;
+}
+.reminder-status.pending {
+  background: #fee2e2;
+  color: #ef4444;
+}
+.reminders-empty {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 40px;
+}
+@media (max-width: 600px) {
+  .reminders-page {
+    padding: 16px 4px;
+  }
+  .reminder-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+} 
