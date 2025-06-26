@@ -3,8 +3,7 @@
 /**
  * Auth Service - Handles communication with auth backend
  */
-const BASE_URL =
-  process.env.REACT_APP_AUTH_API_URL || "http://localhost:5001/api/auth";
+const API_URL = process.env.REACT_APP_AUTH_URL;
 
 /**
  * Register a new user
