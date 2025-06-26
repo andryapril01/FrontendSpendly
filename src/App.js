@@ -46,7 +46,6 @@ const EmergencyAuthFix = () => {
         credentials: 'include', // Include credentials (cookies, etc.) for CORS support
         headers: {
           'Content-Type': 'application/json', // Add Content-Type if needed
-          'Authorization': `Bearer ${yourAuthToken}` // If you're using JWT or other auth methods, include the token
         }
       });
 
