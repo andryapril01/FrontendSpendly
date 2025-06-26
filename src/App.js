@@ -41,7 +41,15 @@ const EmergencyAuthFix = () => {
       clearTokens();
 
       setFixResults((prev) => [...prev, "🌐 Testing backend connection..."]);
-      const backendResponse = await fetch(`${AUTH_API_URL}/api/health`);
+      const backendResponse = await fetch(`${AUTH_API_URL}/api/health`, {
+        method: 'GET', // Make sure it's GET, if that's what the server expects
+        credentials: 'include', // Include credentials (cookies, etc.) for CORS support
+        headers: {
+          'Content-Type': 'application/json', // Add Content-Type if needed
+          'Authorization': `Bearer ${yourAuthToken}` // If you're using JWT or other auth methods, include the token
+        }
+      });
+
 
       if (!backendResponse.ok) {
         setFixResults((prev) => [
