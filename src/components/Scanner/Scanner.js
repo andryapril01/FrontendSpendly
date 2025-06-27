@@ -25,9 +25,9 @@ const Scanner = () => {
   const fileInputRef = useRef(null);
 
   // API endpoints
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:5000";
+  const API_BASE_URL = process.env.REACT_APP_API_URL || "backendspendly-production.up.railway.app";
   const AUTH_API_URL =
-    process.env.REACT_APP_AUTH_URL || "http://localhost:5001";
+    process.env.REACT_APP_AUTH_URL || "backendspendly-production.up.railway.app";
 
   // Check if user is logged in
   useEffect(() => {
